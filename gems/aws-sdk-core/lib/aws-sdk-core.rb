@@ -120,6 +120,28 @@ require_relative 'aws-sdk-sso'
 require_relative 'aws-sdk-ssooidc'
 
 module Aws
+  autoload :Core, 'aws-sdk-core/core'
+
+  module Core
+    autoload :Client, 'aws-sdk-core/client'
+    autoload :Errors, 'aws-sdk-core/errors'
+    autoload :Configuration, 'aws-sdk-core/configuration'
+    autoload :Credentials, 'aws-sdk-core/credentials'
+    autoload :EndpointProvider, 'aws-sdk-core/endpoint_provider'
+    autoload :Resource, 'aws-sdk-core/resource'
+    autoload :Customizations, 'aws-sdk-core/customizations'
+    autoload :Signer, 'aws-sdk-core/signer'
+    autoload :Waiters, 'aws-sdk-core/waiters'
+    autoload :Stubber, 'aws-sdk-core/stubber'
+    autoload :ParamValidator, 'aws-sdk-core/param_validator'
+    autoload :Request, 'aws-sdk-core/request'
+    autoload :Response, 'aws-sdk-core/response'
+    autoload :LogFormatter, 'aws-sdk-core/log_formatter'
+    autoload :ParamConverter, 'aws-sdk-core/param_converter'
+    autoload :ParamBuilder, 'aws-sdk-core/param_builder'
+    autoload :Checksums, 'aws-sdk-core/checksums'
+    autoload :Xml, 'aws-sdk-core/xml'
+  end
 
   CORE_GEM_VERSION = File.read(File.expand_path('../../VERSION', __FILE__)).strip
 
